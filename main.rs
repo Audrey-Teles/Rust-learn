@@ -89,6 +89,18 @@ fn condicionais(){
 
 
     println!("É {} de idade", condicao);
+
+
+    let linguagem = "PHP";
+    // Match statement
+    let proposito = match linguagem {
+        "PHP" => "Web",
+        "Kotlin" => "Android",
+        "Python" => "Data Science",
+        _ => "Desconhecido"
+    };
+
+    println!("O proposito de {} é {}", linguagem, proposito);
 }
 
 fn repeticoes(){
