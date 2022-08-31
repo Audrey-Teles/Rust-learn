@@ -54,8 +54,22 @@ fn escopo(){
 
 }
 
-fn condicionais(){
-    
+
+// Função principal
+fn main() {
+    //Chamada dos escopos
+    escopo(); 
+    sombra(); 
+
+    println!("Soma = {}", soma(2,2));
+
+    condicionais();
+
+    repeticoes();
+
+}
+
+fn condicionais(){    
     let idade:u8 = 18;
     let responsavel_autorizou = true;
     let e_maior = idade >= 18;
@@ -76,14 +90,28 @@ fn condicionais(){
 
     println!("É {} de idade", condicao);
 }
-// Função principal
-fn main() {
-    //Chamada dos escopos
-    escopo(); 
-    sombra(); 
 
-    println!("Soma = {}", soma(2,2));
+fn repeticoes(){
+    let multiplicador:u8 = 5;
 
-    condicionais();
+    let mut contador:u8 = 0;
+
+    // laço de repetição while
+    while contador < 10 {
+        contador += 1;
+        println!("{} x {} = {}", multiplicador, contador, multiplicador * contador);
+   }
+
+   contador = 0;
+   //Laço de repetição loop (while true)
+   loop {
+        contador += 1;
+
+        println!("{} x {} = {}", multiplicador, contador, multiplicador * contador);
+
+        if contador == 10 {
+            break;
+        }
+   }
 
 }
