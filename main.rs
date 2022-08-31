@@ -99,6 +99,10 @@ fn repeticoes(){
     // laço de repetição while
     while contador < 10 {
         contador += 1;
+
+        if contador == 5 {
+            continue;
+        }
         println!("{} x {} = {}", multiplicador, contador, multiplicador * contador);
    }
 
@@ -107,11 +111,21 @@ fn repeticoes(){
    loop {
         contador += 1;
 
+        if contador == 5 {
+            continue;
+        }
+
         println!("{} x {} = {}", multiplicador, contador, multiplicador * contador);
 
         if contador == 10 {
             break;
         }
+   }
+
+   // Laço for semelhante ao for each ou with em python
+   for i in 1..11 {
+        println!("{} x {} = {}", multiplicador, i, multiplicador * i);
+
    }
 
 }
