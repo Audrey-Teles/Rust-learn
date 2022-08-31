@@ -1,10 +1,15 @@
 //Constante global decimal (constante não aloca espaço na memória)
 const PI:f32 = 3.14;
 
+fn soma(a:i32, b:i32) -> i32 {
+    println!("{} + {} = {}", a, b, a + b);
+    a + b
+}
+
 //Variável global mutável (mut não recomendado)
 static mut VARIAVEL_GLOBAL:u8 = 1;
 
-//Demonstração de uma função
+//Demonstração de uma macro
 fn sombra(){
     let a = 123;
 
@@ -52,4 +57,6 @@ fn main() {
     //Chamada dos escopos
     escopo(); 
     sombra(); 
+
+    println!("Soma = {}", soma(2,2));
 }
