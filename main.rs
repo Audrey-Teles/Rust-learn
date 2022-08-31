@@ -1,15 +1,17 @@
 //Constante global decimal (constante não aloca espaço na memória)
 const PI:f32 = 3.14;
 
+// exemplo de uma função, com parâmetros e tipo de saída
 fn soma(a:i32, b:i32) -> i32 {
     println!("{} + {} = {}", a, b, a + b);
+    // omitir o ; apenas retorna a expressão, nesse caso.
     a + b
 }
 
 //Variável global mutável (mut não recomendado)
 static mut VARIAVEL_GLOBAL:u8 = 1;
 
-//Demonstração de uma macro
+// Demonstração de uma macro
 fn sombra(){
     let a = 123;
 
@@ -52,6 +54,28 @@ fn escopo(){
 
 }
 
+fn condicionais(){
+    
+    let idade:u8 = 18;
+    let responsavel_autorizou = true;
+    let e_maior = idade >= 18;
+    
+    if e_maior {
+        println!("Pode entrar na balada!");
+    } else if idade > 16 && responsavel_autorizou {
+        println!("Pode entrar com assinatura do responsável");
+    } else {
+        println!("Não pode entrar na balada!");
+    }
+
+    let condicao;
+
+    // if como expressão
+    condicao = if e_maior {"maior"} else {"menor"};
+
+
+    println!("É {} de idade", condicao);
+}
 // Função principal
 fn main() {
     //Chamada dos escopos
@@ -59,4 +83,7 @@ fn main() {
     sombra(); 
 
     println!("Soma = {}", soma(2,2));
+
+    condicionais();
+
 }
